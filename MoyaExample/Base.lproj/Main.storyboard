@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,82 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MoyaExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uJL-KD-Hdq">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem title="Location" id="iB0-b5-9ZU">
+                                        <connections>
+                                            <action selector="getLocationButtonPressed:" destination="BYZ-38-t0r" id="GzY-S8-KeQ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="tRh-cL-9Xb">
+                                        <textField key="customView" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="Wmh-Nb-Z2f">
+                                            <rect key="frame" x="96.5" y="0.0" width="270" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="270" id="9fa-c7-WL8"/>
+                                                <constraint firstAttribute="height" constant="40" id="c4K-5I-J4p"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="BYZ-38-t0r" id="xKc-QB-RyD"/>
+                                            </connections>
+                                        </textField>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="KYB-Qw-GXS"/>
+                                    <barButtonItem style="plain" id="zzx-2V-vlc">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="r1x-Ge-6kN">
+                                            <rect key="frame" x="375" y="4" width="39" height="36"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="magnifyingglass" catalog="system"/>
+                                            <connections>
+                                                <action selector="searchCityNameButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N9R-eF-dwD"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Bangkok" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AtB-px-Jfa">
+                                <rect key="frame" x="87" y="173" width="240" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="O7V-kz-PlG"/>
+                                    <constraint firstAttribute="width" constant="240" id="O8o-sA-BnI"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AtB-px-Jfa" secondAttribute="trailing" constant="87" id="14L-eP-t8R"/>
+                            <constraint firstItem="AtB-px-Jfa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="4dV-77-Pp7"/>
+                            <constraint firstItem="uJL-KD-Hdq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5I5-iM-ghD"/>
+                            <constraint firstItem="uJL-KD-Hdq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6Bx-5L-mUK"/>
+                            <constraint firstItem="uJL-KD-Hdq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Okg-hi-Nmh"/>
+                            <constraint firstItem="AtB-px-Jfa" firstAttribute="top" secondItem="uJL-KD-Hdq" secondAttribute="bottom" constant="85" id="o3O-bu-hjo"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="cityNameTextField" destination="Wmh-Nb-Z2f" id="zfW-uo-EQT"/>
+                        <outlet property="searchCityNameButton" destination="r1x-Ge-6kN" id="rQ5-MS-eV6"/>
+                        <outlet property="textView" destination="AtB-px-Jfa" id="FhP-tS-mTT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="88.392857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+    </resources>
 </document>

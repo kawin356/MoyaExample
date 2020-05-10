@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,14 @@
 		430442CB2467ECBC003081DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430442C92467ECBC003081DE /* Main.storyboard */; };
 		430442CD2467ECBD003081DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 430442CC2467ECBD003081DE /* Assets.xcassets */; };
 		430442D02467ECBD003081DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430442CE2467ECBD003081DE /* LaunchScreen.storyboard */; };
+		430442D82467ED45003081DE /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430442D72467ED45003081DE /* Api.swift */; };
+		430442DB2467F038003081DE /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430442DA2467F038003081DE /* WeatherModel.swift */; };
+		430442DD2467F5DB003081DE /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430442DC2467F5DB003081DE /* WeatherData.swift */; };
+		FA22827C23DFFD5727F8CDEE /* Pods_MoyaExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57B1AA55BB51E650F447D3C2 /* Pods_MoyaExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D8AEED194E9641B97E77B09 /* Pods-MoyaExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyaExample.debug.xcconfig"; path = "Target Support Files/Pods-MoyaExample/Pods-MoyaExample.debug.xcconfig"; sourceTree = "<group>"; };
 		430442C02467ECBC003081DE /* MoyaExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoyaExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		430442C32467ECBC003081DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		430442C52467ECBC003081DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,11 @@
 		430442CC2467ECBD003081DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		430442CF2467ECBD003081DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		430442D12467ECBD003081DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		430442D72467ED45003081DE /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		430442DA2467F038003081DE /* WeatherModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		430442DC2467F5DB003081DE /* WeatherData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		4C0B17F8039C7F0FDA2B31D2 /* Pods-MoyaExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyaExample.release.xcconfig"; path = "Target Support Files/Pods-MoyaExample/Pods-MoyaExample.release.xcconfig"; sourceTree = "<group>"; };
+		57B1AA55BB51E650F447D3C2 /* Pods_MoyaExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoyaExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA22827C23DFFD5727F8CDEE /* Pods_MoyaExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +53,8 @@
 			children = (
 				430442C22467ECBC003081DE /* MoyaExample */,
 				430442C12467ECBC003081DE /* Products */,
+				D3CF492B1CBD99A2EE75E167 /* Pods */,
+				5BB107595E0A023CA2D5F628 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +76,36 @@
 				430442CC2467ECBD003081DE /* Assets.xcassets */,
 				430442CE2467ECBD003081DE /* LaunchScreen.storyboard */,
 				430442D12467ECBD003081DE /* Info.plist */,
+				430442DC2467F5DB003081DE /* WeatherData.swift */,
+				430442DA2467F038003081DE /* WeatherModel.swift */,
+				430442D92467ED4B003081DE /* Network */,
 			);
 			path = MoyaExample;
+			sourceTree = "<group>";
+		};
+		430442D92467ED4B003081DE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				430442D72467ED45003081DE /* Api.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		5BB107595E0A023CA2D5F628 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				57B1AA55BB51E650F447D3C2 /* Pods_MoyaExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D3CF492B1CBD99A2EE75E167 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1D8AEED194E9641B97E77B09 /* Pods-MoyaExample.debug.xcconfig */,
+				4C0B17F8039C7F0FDA2B31D2 /* Pods-MoyaExample.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +115,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 430442D42467ECBD003081DE /* Build configuration list for PBXNativeTarget "MoyaExample" */;
 			buildPhases = (
+				42D45E47391815DC84248CE3 /* [CP] Check Pods Manifest.lock */,
 				430442BC2467ECBC003081DE /* Sources */,
 				430442BD2467ECBC003081DE /* Frameworks */,
 				430442BE2467ECBC003081DE /* Resources */,
+				AAC96B7F2C63E04E17CC8E12 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +176,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		42D45E47391815DC84248CE3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MoyaExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAC96B7F2C63E04E17CC8E12 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoyaExample/Pods-MoyaExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoyaExample/Pods-MoyaExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MoyaExample/Pods-MoyaExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		430442BC2467ECBC003081DE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,7 +225,10 @@
 			files = (
 				430442C82467ECBC003081DE /* ViewController.swift in Sources */,
 				430442C42467ECBC003081DE /* AppDelegate.swift in Sources */,
+				430442D82467ED45003081DE /* Api.swift in Sources */,
 				430442C62467ECBC003081DE /* SceneDelegate.swift in Sources */,
+				430442DD2467F5DB003081DE /* WeatherData.swift in Sources */,
+				430442DB2467F038003081DE /* WeatherModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +370,7 @@
 		};
 		430442D52467ECBD003081DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D8AEED194E9641B97E77B09 /* Pods-MoyaExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +389,7 @@
 		};
 		430442D62467ECBD003081DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C0B17F8039C7F0FDA2B31D2 /* Pods-MoyaExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
